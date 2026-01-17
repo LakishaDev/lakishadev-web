@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "notes": "Notes",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building reliable software systems — ",
+    "titleHighlight": "from embedded devices to cloud APIs.",
+    "subtitle": "Full-stack developer focused on IoT, real-time data pipelines, and backend system design.",
+    "viewProjects": "View Projects",
+    "contact": "Contact"
+  },
+  "whatIBuild": {
+    "title": "What I Build",
+    "iot": {
+      "title": "IoT & Embedded Systems",
+      "description": "Designing and integrating embedded devices that reliably collect and transmit real-world data.",
+      "tech": "ESP32, sensors, edge processing"
+    },
+    "backend": {
+      "title": "Backend Systems",
+      "description": "Building maintainable backend services with real-time communication and secure APIs.",
+      "tech": "Node.js, TypeScript, REST, WebSockets"
+    },
+    "data": {
+      "title": "Data & Integration",
+      "description": "Structuring reliable data flows between devices, services, and dashboards.",
+      "tech": "SQLite, PostgreSQL, device-to-cloud pipelines"
+    }
+  },
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "viewAll": "View all →",
+    "stack": "Stack:",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "caseStudy": "Case Study"
+  },
+  "cta": {
+    "title": "Building something complex?",
+    "description": "I specialize in systems where reliability matters — IoT platforms, real-time data pipelines, and backend architectures that scale.",
+    "getInTouch": "Get in touch"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Real-world systems focused on reliability, scalability, and maintainability. Each project demonstrates specific architectural decisions and trade-offs."
+  },
+  "notes": {
+    "title": "Engineering Notes",
+    "description": "Short technical notes on architectural decisions, trade-offs, and lessons learned from building real systems."
+  },
+  "footer": {
+    "tagline": "Building reliable systems.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "copyright": "© {year} Lazar. Built with Next.js."
+  }
+}

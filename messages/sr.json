@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Početna",
+    "projects": "Projekti",
+    "notes": "Beleške",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Gradim pouzdane softverske sisteme — ",
+    "titleHighlight": "od ugrađenih uređaja do cloud API-ja.",
+    "subtitle": "Full-stack developer fokusiran na IoT, data pipeline-ove u realnom vremenu i dizajn backend sistema.",
+    "viewProjects": "Pogledaj projekte",
+    "contact": "Kontakt"
+  },
+  "whatIBuild": {
+    "title": "Šta gradim",
+    "iot": {
+      "title": "IoT i ugrađeni sistemi",
+      "description": "Dizajniram i integrisem ugrađene uređaje koji pouzdano prikupljaju i prenose podatke iz realnog sveta.",
+      "tech": "ESP32, senzori, edge processing"
+    },
+    "backend": {
+      "title": "Backend sistemi",
+      "description": "Gradim održive backend servise sa komunikacijom u realnom vremenu i sigurnim API-jima.",
+      "tech": "Node.js, TypeScript, REST, WebSockets"
+    },
+    "data": {
+      "title": "Podaci i integracije",
+      "description": "Strukturiram pouzdane tokove podataka između uređaja, servisa i dashboard-a.",
+      "tech": "SQLite, PostgreSQL, device-to-cloud pipelines"
+    }
+  },
+  "featuredProjects": {
+    "title": "Istaknuti projekti",
+    "viewAll": "Vidi sve →",
+    "stack": "Tehnologije:",
+    "code": "Kod",
+    "liveDemo": "Demo",
+    "caseStudy": "Studija slučaja"
+  },
+  "cta": {
+    "title": "Gradiš nešto kompleksno?",
+    "description": "Specijalizovan sam za sisteme gde je pouzdanost ključna — IoT platforme, data pipeline-ove u realnom vremenu i backend arhitekture koje skaliraju.",
+    "getInTouch": "Kontaktiraj me"
+  },
+  "projects": {
+    "title": "Projekti",
+    "description": "Sistemi iz realnog sveta fokusirani na pouzdanost, skalabilnost i održivost. Svaki projekat demonstrira specifične arhitektonske odluke i kompromise."
+  },
+  "notes": {
+    "title": "Inženjerske beleške",
+    "description": "Kratke tehničke beleške o arhitektonskim odlukama, kompromisima i lekcijama naučenim iz gradnje realnih sistema."
+  },
+  "footer": {
+    "tagline": "Gradim pouzdane sisteme.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "copyright": "© {year} Lazar. Napravljeno sa Next.js."
+  }
+}
