@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import Section from "@/components/Section";
 import NoteCard from "@/components/NoteCard";
 import { getAllNotes } from "@/lib/mdx";
 
-export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {
@@ -18,6 +19,7 @@ export default async function NotesPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = useTranslations();
   const notes = await getAllNotes(locale);
 

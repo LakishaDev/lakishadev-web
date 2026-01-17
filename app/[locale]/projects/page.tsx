@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/data";
-
-export const runtime = "edge";
 
 export async function generateMetadata() {
   return {
@@ -13,7 +12,12 @@ export async function generateMetadata() {
   };
 }
 
-export default function ProjectsPage() {
+export default function ProjectsPage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  setRequestLocale(locale);
   const t = useTranslations();
 
   return (

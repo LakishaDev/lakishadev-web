@@ -1,0 +1,12 @@
+name = "lakishadev-web"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".open-next/worker"
+
+[vars]
+# Environment variables can be set here or in Cloudflare dashboard
+# Example: MY_VAR = "value"
+
+# For production environment variables (secrets), use:
+# wrangler secret put RESEND_API_KEY
+# wrangler secret put GITHUB_TOKEN

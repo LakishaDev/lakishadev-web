@@ -26,7 +26,7 @@ Professional, multilingual portfolio website showcasing full-stack and IoT engin
 - **Analytics:** Vercel Analytics
 - **Fonts:** Inter, JetBrains Mono
 - **Icons:** Lucide React
-- **Deployment:** Vercel
+- **Deployment:** Cloudflare Pages (with OpenNext adapter)
 
 ## Getting Started
 
@@ -194,26 +194,50 @@ Returns recent GitHub events
 
 ## Deployment
 
-### Vercel (Recommended)
+### Cloudflare Pages (Recommended)
+
+**Quick Deploy:**
+
+```bash
+npm run build
+npm run pages:build
+npx wrangler pages deploy .open-next/worker --project-name=lakishadev-web
+```
+
+**GitHub Integration:**
 
 1. Push to GitHub
-2. Import repository in [Vercel](https://vercel.com)
-3. Add environment variables
-4. Deploy automatically
+2. Connect repository in [Cloudflare Pages](https://dash.cloudflare.com)
+3. Build settings:
+   - **Build command:** `npm run build && npx @opennextjs/cloudflare`
+   - **Build output directory:** `.open-next/worker`
+4. Add environment variables in dashboard
 
-Environment variables needed on Vercel:
+**Environment variables needed:**
 
 - `RESEND_API_KEY`
 - `GITHUB_USERNAME`
 - `GITHUB_TOKEN` (optional)
 
-### Other Platforms
-
-Build and deploy the `.next` folder:
+**Set secrets via Wrangler:**
 
 ```bash
-npm run build
+npx wrangler secret put RESEND_API_KEY
+npx wrangler secret put GITHUB_USERNAME
 ```
+
+📖 **Full deployment guide:** See [CLOUDFLARE_DEPLOYMENT.md](./CLOUDFLARE_DEPLOYMENT.md)
+
+### Vercel (Alternative)
+
+Also compatible with Vercel:
+
+1. Push to GitHub
+2. Import in [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy
+
+Build command for Vercel: `npm run build`
 
 ## Performance
 

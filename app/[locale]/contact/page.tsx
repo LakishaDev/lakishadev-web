@@ -1,10 +1,9 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import GitHubActivity from "@/components/GitHubActivity";
 import { Mail, Github, Linkedin } from "lucide-react";
-
-export const runtime = "edge";
 
 export async function generateMetadata() {
   return {
@@ -14,7 +13,12 @@ export async function generateMetadata() {
   };
 }
 
-export default function ContactPage() {
+export default function ContactPage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  setRequestLocale(locale);
   const t = useTranslations();
 
   return (

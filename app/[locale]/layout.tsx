@@ -7,9 +7,6 @@ import Footer from "@/components/Footer";
 import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
 import { Analytics } from "@vercel/analytics/react";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

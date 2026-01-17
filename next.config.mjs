@@ -10,6 +10,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Output standalone for Cloudflare Pages with OpenNext
+  output: "standalone",
 };
 
 export default withNextIntl(nextConfig);
