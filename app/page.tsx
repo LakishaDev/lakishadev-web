@@ -3,6 +3,8 @@ import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects, skills } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>
