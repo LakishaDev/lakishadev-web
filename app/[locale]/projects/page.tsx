@@ -3,6 +3,8 @@ import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/data";
 
+export const runtime = "edge";
+
 export async function generateMetadata() {
   return {
     title: "Projects — Lazar",

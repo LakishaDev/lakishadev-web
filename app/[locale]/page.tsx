@@ -5,6 +5,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects, skills } from "@/lib/data";
 import Link from "next/link";
 
+export const runtime = "edge";
+
 export default function Home() {
   const t = useTranslations();
 

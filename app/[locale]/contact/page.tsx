@@ -4,6 +4,8 @@ import ContactForm from "@/components/ContactForm";
 import GitHubActivity from "@/components/GitHubActivity";
 import { Mail, Github, Linkedin } from "lucide-react";
 
+export const runtime = "edge";
+
 export async function generateMetadata() {
   return {
     title: "Contact — Lazar",

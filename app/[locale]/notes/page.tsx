@@ -3,6 +3,8 @@ import Section from "@/components/Section";
 import NoteCard from "@/components/NoteCard";
 import { getAllNotes } from "@/lib/mdx";
 
+export const runtime = "edge";
+
 export async function generateMetadata() {
   return {
     title: "Engineering Notes — Lazar",
