@@ -1,5 +1,6 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +13,12 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://lakisha.dev",
+  ),
+};
 
 export default function RootLayout({
   children,

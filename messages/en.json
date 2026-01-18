@@ -43,6 +43,10 @@
     "description": "I specialize in systems where reliability matters — IoT platforms, real-time data pipelines, and backend architectures that scale.",
     "getInTouch": "Get in touch"
   },
+  "githubActivity": {
+    "title": "Recent Activity",
+    "description": "Latest commits and contributions from my GitHub repositories"
+  },
   "projects": {
     "title": "Projects",
     "description": "Real-world systems focused on reliability, scalability, and maintainability. Each project demonstrates specific architectural decisions and trade-offs."

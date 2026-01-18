@@ -7,10 +7,34 @@ import { getAllNotes } from "@/lib/mdx";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
+  const title = "Engineering Notes";
+  const description =
+    "Technical notes on system design, architecture decisions, and lessons learned from building IoT and backend systems.";
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || "https://lakisha.dev"}/notes`;
+
   return {
-    title: "Engineering Notes — Lazar",
-    description:
-      "Technical notes on system design, architecture decisions, and lessons learned.",
+    title,
+    description,
+    keywords: [
+      "Engineering Blog",
+      "Technical Articles",
+      "IoT Architecture",
+      "Backend Development",
+      "System Design",
+      "WebSocket Guide",
+      "Real-time Systems",
+    ],
+    openGraph: {
+      title: `${title} | Lazar`,
+      description,
+      url,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Lazar`,
+      description,
+    },
   };
 }
 

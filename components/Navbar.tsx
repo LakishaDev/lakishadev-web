@@ -38,7 +38,7 @@ export default function Navbar() {
             className="text-lg font-semibold tracking-tight"
           >
             <span className="text-accent">{"<"}</span>
-            lazar
+            lakisha.dev
             <span className="text-accent">{"/>"}</span>
           </Link>
 

@@ -43,6 +43,10 @@
     "description": "Specijalizovan sam za sisteme gde je pouzdanost ključna — IoT platforme, data pipeline-ove u realnom vremenu i backend arhitekture koje skaliraju.",
     "getInTouch": "Kontaktiraj me"
   },
+  "githubActivity": {
+    "title": "Nedavna aktivnost",
+    "description": "Poslednji commit-ovi i doprinosi iz mojih GitHub repozitorijuma"
+  },
   "projects": {
     "title": "Projekti",
     "description": "Sistemi iz realnog sveta fokusirani na pouzdanost, skalabilnost i održivost. Svaki projekat demonstrira specifične arhitektonske odluke i kompromise."

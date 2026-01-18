@@ -5,10 +5,34 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/data";
 
 export async function generateMetadata() {
+  const title = "Projects";
+  const description =
+    "Full-stack and IoT projects focused on reliable system design. Real-world implementations of embedded devices, backend services, and data pipelines.";
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || "https://lakisha.dev"}/projects`;
+
   return {
-    title: "Projects — Lazar",
-    description:
-      "Full-stack and IoT projects focused on reliable system design.",
+    title,
+    description,
+    keywords: [
+      "IoT Projects",
+      "Backend Systems",
+      "Real-time Applications",
+      "ESP32 Projects",
+      "Node.js Applications",
+      "WebSocket Implementation",
+      "MQTT Systems",
+    ],
+    openGraph: {
+      title: `${title} | Lazar`,
+      description,
+      url,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Lazar`,
+      description,
+    },
   };
 }
 

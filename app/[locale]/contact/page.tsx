@@ -6,10 +6,36 @@ import GitHubActivity from "@/components/GitHubActivity";
 import { Mail, Github, Linkedin } from "lucide-react";
 
 export async function generateMetadata() {
+  const title = "Contact";
+  const description =
+    "Get in touch for collaboration, consulting, or questions about IoT and backend systems. I typically respond within 24-48 hours.";
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || "https://lakisha.dev"}/contact`;
+
   return {
-    title: "Contact — Lazar",
-    description:
-      "Get in touch for collaboration, consulting, or questions about IoT and backend systems.",
+    title,
+    description,
+    openGraph: {
+      title: `${title} | Lazar`,
+      description,
+      url,
+      type: "website",
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://lakisha.dev"}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "Contact Lazar",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Lazar`,
+      description,
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
@@ -47,33 +73,33 @@ export default function ContactPage({
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:lazar@lakisha.dev"
                   className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-accent"
                 >
                   <Mail size={18} />
-                  your.email@example.com
+                  lazar@lakisha.dev
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/LakishaDev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-accent"
                 >
                   <Github size={18} />
-                  github.com/yourusername
+                  github.com/LakishaDev
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://linkedin.com/in/lazar-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-accent"
                 >
                   <Linkedin size={18} />
-                  LinkedIn Profile
+                  linkedin.com/in/lazar-dev
                 </a>
               </li>
             </ul>

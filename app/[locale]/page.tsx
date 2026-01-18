@@ -3,6 +3,8 @@ import { setRequestLocale } from "next-intl/server";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
+import GitHubActivity from "@/components/GitHubActivity";
+import Stats from "@/components/Stats";
 import { projects, skills } from "@/lib/data";
 import Link from "next/link";
 
@@ -84,8 +86,26 @@ export default function Home({
         </div>
       </Section>
 
-      {/* CTA Section */}
+      {/* GitHub Activity Section */}
       <Section className="bg-surface/30">
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold tracking-tight">
+            {t("githubActivity.title")}
+          </h2>
+          <p className="mt-2 text-text-secondary">
+            {t("githubActivity.description")}
+          </p>
+        </div>
+
+        <div className="mb-12">
+          <Stats />
+        </div>
+
+        <GitHubActivity />
+      </Section>
+
+      {/* CTA Section */}
+      <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight">
             {t("cta.title")}
@@ -93,12 +113,12 @@ export default function Home({
           <p className="mb-8 text-lg text-text-secondary">
             {t("cta.description")}
           </p>
-          <a
-            href="mailto:your.email@example.com"
+          <Link
+            href="/contact"
             className="inline-block rounded-lg bg-primary px-8 py-3 font-medium text-text-primary transition-colors hover:bg-primary/80"
           >
             {t("cta.getInTouch")}
-          </a>
+          </Link>
         </div>
       </Section>
     </>
