@@ -41,38 +41,50 @@ export async function generateMetadata({ params: { slug, locale } }: Props) {
 
 const components = {
   h1: (props: any) => (
-    <h1 className="mb-6 text-4xl font-bold tracking-tight" {...props} />
+    <h1
+      className="mb-4 sm:mb-6 text-3xl sm:text-4xl font-bold tracking-tight"
+      {...props}
+    />
   ),
   h2: (props: any) => (
-    <h2 className="mb-4 mt-8 text-2xl font-bold tracking-tight" {...props} />
+    <h2
+      className="mb-3 sm:mb-4 mt-6 sm:mt-8 text-xl sm:text-2xl font-bold tracking-tight"
+      {...props}
+    />
   ),
   h3: (props: any) => (
-    <h3 className="mb-3 mt-6 text-xl font-semibold" {...props} />
+    <h3
+      className="mb-2 sm:mb-3 mt-4 sm:mt-6 text-lg sm:text-xl font-semibold"
+      {...props}
+    />
   ),
   p: (props: any) => (
-    <p className="mb-4 leading-relaxed text-text-secondary" {...props} />
+    <p
+      className="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed text-text-secondary"
+      {...props}
+    />
   ),
   code: (props: any) => (
     <code
-      className="rounded bg-surface px-1.5 py-0.5 font-mono text-sm text-accent"
+      className="rounded bg-surface px-1 sm:px-1.5 py-0.5 font-mono text-xs sm:text-sm text-accent"
       {...props}
     />
   ),
   pre: (props: any) => (
     <pre
-      className="mb-4 overflow-x-auto rounded-lg bg-surface p-4 font-mono text-sm"
+      className="mb-3 sm:mb-4 overflow-x-auto rounded-lg bg-surface p-3 sm:p-4 font-mono text-xs sm:text-sm"
       {...props}
     />
   ),
   ul: (props: any) => (
     <ul
-      className="mb-4 ml-6 list-disc space-y-2 text-text-secondary"
+      className="mb-3 sm:mb-4 ml-4 sm:ml-6 list-disc space-y-1.5 sm:space-y-2 text-sm sm:text-base text-text-secondary"
       {...props}
     />
   ),
   ol: (props: any) => (
     <ol
-      className="mb-4 ml-6 list-decimal space-y-2 text-text-secondary"
+      className="mb-3 sm:mb-4 ml-4 sm:ml-6 list-decimal space-y-1.5 sm:space-y-2 text-sm sm:text-base text-text-secondary"
       {...props}
     />
   ),
@@ -80,7 +92,10 @@ const components = {
     <strong className="font-semibold text-text-primary" {...props} />
   ),
   a: (props: any) => (
-    <a className="text-accent hover:text-accent-alt underline" {...props} />
+    <a
+      className="text-accent hover:text-accent-alt underline break-words"
+      {...props}
+    />
   ),
 };
 
@@ -92,34 +107,36 @@ export default async function NotePage({ params: { slug, locale } }: Props) {
   }
 
   return (
-    <article className="mx-auto max-w-4xl px-6 py-24">
+    <article className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:py-24">
       <Link
         href={`/${locale}/notes`}
-        className="mb-8 inline-flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent"
+        className="mb-6 sm:mb-8 inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-text-secondary transition-colors hover:text-accent"
       >
-        <ArrowLeft size={16} />
+        <ArrowLeft size={14} className="sm:w-4 sm:h-4" />
         Back to notes
       </Link>
 
-      <header className="mb-12">
-        <time className="mb-2 block font-mono text-sm text-text-secondary">
+      <header className="mb-8 sm:mb-10 md:mb-12">
+        <time className="mb-2 block font-mono text-xs sm:text-sm text-text-secondary">
           {new Date(note.metadata.date).toLocaleDateString(locale, {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </time>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
+        <h1 className="mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           {note.metadata.title}
         </h1>
-        <p className="text-lg text-text-secondary">{note.metadata.excerpt}</p>
+        <p className="text-base sm:text-lg text-text-secondary">
+          {note.metadata.excerpt}
+        </p>
 
         {note.metadata.tags && note.metadata.tags.length > 0 && (
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-4 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
             {note.metadata.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded bg-primary/20 px-3 py-1 text-xs font-mono text-accent"
+                className="rounded bg-primary/20 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-mono text-accent"
               >
                 {tag}
               </span>

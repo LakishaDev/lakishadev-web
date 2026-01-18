@@ -46,16 +46,16 @@ export default function ProjectsPage({
 
   return (
     <Section>
-      <div className="mb-12">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
+      <div className="mb-8 sm:mb-10 md:mb-12">
+        <h1 className="mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           {t("projects.title")}
         </h1>
-        <p className="max-w-2xl text-lg text-text-secondary">
+        <p className="max-w-2xl text-base sm:text-lg text-text-secondary">
           {t("projects.description")}
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}

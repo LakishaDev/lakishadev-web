@@ -50,29 +50,31 @@ export default function Stats() {
   }, []);
 
   return (
-    <div className="grid gap-6 md:grid-cols-3">
-      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-6 text-center">
-        <GitBranch className="mx-auto mb-3 text-accent" size={32} />
-        <div className="mb-1 text-3xl font-bold text-text-primary">
+    <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3">
+      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-5 sm:p-6 text-center">
+        <GitBranch className="mx-auto mb-3 text-accent" size={28} />
+        <div className="mb-1 text-2xl sm:text-3xl font-bold text-text-primary">
           {stats.commits.toLocaleString()}+
         </div>
-        <div className="text-sm text-text-secondary">Commits</div>
+        <div className="text-xs sm:text-sm text-text-secondary">Commits</div>
       </div>
 
-      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-6 text-center">
-        <Code2 className="mx-auto mb-3 text-accent" size={32} />
-        <div className="mb-1 text-3xl font-bold text-text-primary">
+      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-5 sm:p-6 text-center">
+        <Code2 className="mx-auto mb-3 text-accent" size={28} />
+        <div className="mb-1 text-2xl sm:text-3xl font-bold text-text-primary">
           {stats.repos}+
         </div>
-        <div className="text-sm text-text-secondary">Public Repos</div>
+        <div className="text-xs sm:text-sm text-text-secondary">
+          Public Repos
+        </div>
       </div>
 
-      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-6 text-center">
-        <Zap className="mx-auto mb-3 text-accent" size={32} />
-        <div className="mb-1 text-3xl font-bold text-text-primary">
+      <div className="rounded-lg border border-text-secondary/20 bg-surface/50 p-5 sm:p-6 text-center">
+        <Zap className="mx-auto mb-3 text-accent" size={28} />
+        <div className="mb-1 text-2xl sm:text-3xl font-bold text-text-primary">
           {stats.languages}+
         </div>
-        <div className="text-sm text-text-secondary">Languages</div>
+        <div className="text-xs sm:text-sm text-text-secondary">Languages</div>
       </div>
     </div>
   );

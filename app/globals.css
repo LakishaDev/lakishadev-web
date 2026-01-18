@@ -10,17 +10,45 @@
   body {
     @apply bg-background text-text-primary antialiased;
   }
+
+  /* Responsive text scaling */
+  html {
+    font-size: 16px;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Touch-friendly tap targets */
+  @media (max-width: 768px) {
+    button,
+    a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 ::-webkit-scrollbar-track {

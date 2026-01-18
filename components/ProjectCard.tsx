@@ -19,21 +19,25 @@ export default function ProjectCard({
   caseStudyUrl,
 }: ProjectCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-lg border border-text-secondary/20 bg-surface/50 p-6 transition-all hover:border-accent/50 hover:bg-surface">
+    <article className="group relative overflow-hidden rounded-lg border border-text-secondary/20 bg-surface/50 p-4 sm:p-5 md:p-6 transition-all hover:border-accent/50 hover:bg-surface">
       <div className="mb-4">
-        <h3 className="mb-2 text-2xl font-bold tracking-tight text-text-primary">
+        <h3 className="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-text-primary">
           {title}
         </h3>
-        <p className="text-text-secondary leading-relaxed">{description}</p>
+        <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+          {description}
+        </p>
       </div>
 
-      <div className="mb-6">
-        <p className="mb-2 text-sm font-medium text-text-secondary">Stack:</p>
-        <div className="flex flex-wrap gap-2">
+      <div className="mb-5 sm:mb-6">
+        <p className="mb-2 text-xs sm:text-sm font-medium text-text-secondary">
+          Stack:
+        </p>
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {stack.map((tech) => (
             <span
               key={tech}
-              className="rounded bg-primary/20 px-3 py-1 text-xs font-mono text-accent"
+              className="rounded bg-primary/20 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-mono text-accent"
             >
               {tech}
             </span>
@@ -41,15 +45,15 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-3 sm:gap-4">
         {githubUrl && (
           <a
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent"
+            className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-text-secondary transition-colors hover:text-accent"
           >
-            <Github size={16} />
+            <Github size={14} className="sm:w-4 sm:h-4" />
             Code
           </a>
         )}
@@ -58,18 +62,18 @@ export default function ProjectCard({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent"
+            className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-text-secondary transition-colors hover:text-accent"
           >
-            <ExternalLink size={16} />
+            <ExternalLink size={14} className="sm:w-4 sm:h-4" />
             Live Demo
           </a>
         )}
         {caseStudyUrl && (
           <Link
             href={caseStudyUrl}
-            className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent"
+            className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-text-secondary transition-colors hover:text-accent"
           >
-            <ExternalLink size={16} />
+            <ExternalLink size={14} className="sm:w-4 sm:h-4" />
             Case Study
           </Link>
         )}

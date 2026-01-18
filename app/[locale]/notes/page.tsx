@@ -49,11 +49,11 @@ export default async function NotesPage({
 
   return (
     <Section>
-      <div className="mb-12">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
+      <div className="mb-8 sm:mb-10 md:mb-12">
+        <h1 className="mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           {t("notes.title")}
         </h1>
-        <p className="max-w-2xl text-lg text-text-secondary">
+        <p className="max-w-2xl text-base sm:text-lg text-text-secondary">
           {t("notes.description")}
         </p>
       </div>

@@ -82,11 +82,11 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
       <div>
         <label
           htmlFor="name"
-          className="mb-2 block text-sm font-medium text-text-primary"
+          className="mb-2 block text-xs sm:text-sm font-medium text-text-primary"
         >
           Name *
         </label>
@@ -103,19 +103,19 @@ export default function ContactForm() {
             errors.name
               ? "border-red-500/50 focus:border-red-500"
               : "border-text-secondary/30 focus:border-accent"
-          } bg-surface px-4 py-3 text-text-primary transition-colors focus:outline-none`}
+          } bg-surface px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-text-primary transition-colors focus:outline-none`}
           disabled={status === "loading"}
           placeholder="Your name"
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+          <p className="mt-1 text-xs sm:text-sm text-red-400">{errors.name}</p>
         )}
       </div>
 
       <div>
         <label
           htmlFor="email"
-          className="mb-2 block text-sm font-medium text-text-primary"
+          className="mb-2 block text-xs sm:text-sm font-medium text-text-primary"
         >
           Email *
         </label>
@@ -132,19 +132,19 @@ export default function ContactForm() {
             errors.email
               ? "border-red-500/50 focus:border-red-500"
               : "border-text-secondary/30 focus:border-accent"
-          } bg-surface px-4 py-3 text-text-primary transition-colors focus:outline-none`}
+          } bg-surface px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-text-primary transition-colors focus:outline-none`}
           disabled={status === "loading"}
           placeholder="your.email@example.com"
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+          <p className="mt-1 text-xs sm:text-sm text-red-400">{errors.email}</p>
         )}
       </div>
 
       <div>
         <label
           htmlFor="message"
-          className="mb-2 block text-sm font-medium text-text-primary"
+          className="mb-2 block text-xs sm:text-sm font-medium text-text-primary"
         >
           Message *
         </label>
@@ -161,12 +161,14 @@ export default function ContactForm() {
             errors.message
               ? "border-red-500/50 focus:border-red-500"
               : "border-text-secondary/30 focus:border-accent"
-          } bg-surface px-4 py-3 text-text-primary transition-colors focus:outline-none resize-none`}
+          } bg-surface px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-text-primary transition-colors focus:outline-none resize-none`}
           disabled={status === "loading"}
           placeholder="Tell me about your project or question..."
         />
         {errors.message && (
-          <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+          <p className="mt-1 text-xs sm:text-sm text-red-400">
+            {errors.message}
+          </p>
         )}
         <p className="mt-1 text-xs text-text-secondary/70">
           {formData.message.length} / 1000 characters
@@ -174,13 +176,13 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <div className="rounded-lg bg-red-500/10 border border-red-500/30 px-4 py-3 text-sm text-red-400">
+        <div className="rounded-lg bg-red-500/10 border border-red-500/30 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-red-400">
           {errorMessage}
         </div>
       )}
 
       {status === "success" && (
-        <div className="rounded-lg bg-green-500/10 border border-green-500/30 px-4 py-3 text-sm text-green-400">
+        <div className="rounded-lg bg-green-500/10 border border-green-500/30 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-green-400">
           Message sent successfully! I'll get back to you soon.
         </div>
       )}
@@ -188,13 +190,13 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-text-primary transition-colors hover:bg-primary/80 disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-text-primary transition-colors hover:bg-primary/80 disabled:opacity-50"
       >
         {status === "loading" ? (
           "Sending..."
         ) : (
           <>
-            <Send size={18} />
+            <Send size={16} className="sm:w-[18px] sm:h-[18px]" />
             Send Message
           </>
         )}
