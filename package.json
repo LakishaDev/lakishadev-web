@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @opennextjs/cloudflare",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy .open-next/worker",
-    "pages:dev": "wrangler pages dev .open-next/worker --compatibility-date=2024-01-01 --compatibility-flags=nodejs_compat"
+    "pages:build": "npx @opennextjs/cloudflare build",
+    "pages:deploy": "npm run pages:build && npx @opennextjs/cloudflare deploy",
+    "pages:dev": "npx @opennextjs/cloudflare preview"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.0",

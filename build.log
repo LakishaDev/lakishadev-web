@@ -1,0 +1,59 @@
+
+> lakishadev-web@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/23) ...
+   Generating static pages (5/23) 
+   Generating static pages (11/23) 
+   Generating static pages (17/23) 
+ ✓ Generating static pages (23/23)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                           Size     First Load JS
+┌ ○ /                                                 336 B          87.7 kB
+├ ○ /_not-found                                       873 B          88.2 kB
+├ ● /[locale]                                         36.4 kB         148 kB
+├   ├ /en
+├   ├ /sr
+├   └ /sr-Cyrl
+├ ● /[locale]/contact                                 2.15 kB         106 kB
+├   ├ /en/contact
+├   ├ /sr/contact
+├   └ /sr-Cyrl/contact
+├ ● /[locale]/notes                                   1.54 kB        97.6 kB
+├   ├ /en/notes
+├   ├ /sr/notes
+├   └ /sr-Cyrl/notes
+├ ● /[locale]/notes/[slug]                            181 B          96.2 kB
+├   ├ /en/notes/websocket-reconnection-strategy
+├   ├ /sr/notes/websocket-reconnection-strategy
+├   └ /sr-Cyrl/notes/websocket-reconnection-strategy
+├ ● /[locale]/projects                                1.54 kB        97.6 kB
+├   ├ /en/projects
+├   ├ /sr/projects
+├   └ /sr-Cyrl/projects
+├ ƒ /api/contact                                      0 B                0 B
+├ ○ /api/github/activity                              0 B                0 B
+├ ○ /notes                                            181 B          96.2 kB
+└ ○ /projects                                         181 B          96.2 kB
++ First Load JS shared by all                         87.3 kB
+  ├ chunks/117-ea738a636dc559b9.js                    31.7 kB
+  ├ chunks/fd9d1056-1f1f859026f5f0fa.js               53.6 kB
+  └ other shared chunks (total)                       1.95 kB
+
+
+ƒ Middleware                                          39.3 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
