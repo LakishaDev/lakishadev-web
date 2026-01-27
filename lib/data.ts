@@ -25,7 +25,7 @@ export interface Skill {
 export const projects: Project[] = [
   {
     id: "evagahub",
-    title: "eVagaHub",
+    title: "eVaga Hub",
     description:
       "Industrial measurement platform connecting hardware scales to cloud dashboards in real time. Handles data collection, WebSocket communication, and multi-device orchestration.",
     stack: [
@@ -34,25 +34,24 @@ export const projects: Project[] = [
       "WebSockets",
       "SQLite",
       "PostgreSQL",
-      "Flutter",
     ],
-    githubUrl: "https://github.com/yourusername/evagahub",
+    githubUrl: "https://github.com/LakishaDev/eVagaHub",
     caseStudyUrl: "/projects/evagahub",
   },
   {
-    id: "iot-data-pipeline",
-    title: "IoT Data Pipeline",
+    id: "evagamobile",
+    title: "eVaga Mobile",
     description:
-      "Edge-to-cloud data pipeline for ESP32-based sensor networks. Implements reliable message queuing, reconnection logic, and time-series data aggregation.",
-    stack: ["ESP32", "C++", "MQTT", "Node.js", "InfluxDB", "Grafana"],
+      "",
+    stack: ["Flutter", "Dart"],
     githubUrl: "https://github.com/yourusername/iot-pipeline",
   },
   {
-    id: "device-management-api",
-    title: "Device Management API",
+    id: "evagadesktop",
+    title: "eVaga Desktop",
     description:
-      "RESTful API for provisioning and managing IoT devices at scale. Implements authentication, device registration, configuration management, and firmware OTA updates.",
-    stack: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
+      "",
+    stack: ["C# Windows Forms", "SQL Server"],
     githubUrl: "https://github.com/yourusername/device-api",
   },
 ];
